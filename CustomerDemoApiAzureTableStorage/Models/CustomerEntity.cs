@@ -14,7 +14,7 @@ namespace CustomerDemoApiAzureTableStorage.Models
         }
         public CustomerEntity(Customer customer)
         {
-            this.PartitionKey = "category";
+            this.PartitionKey = customer.Category;
             this.RowKey= customer.Id;
         }
     }

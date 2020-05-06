@@ -6,7 +6,6 @@ using CustomerDemoApiAzureTableStorage.Models;
 using CustomerDemoApiAzureTableStorage.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using CustomerDemoApiAzureTableStorage.Services;
 
 namespace CustomerDemoApiAzureTableStorage.Controllers
 {
