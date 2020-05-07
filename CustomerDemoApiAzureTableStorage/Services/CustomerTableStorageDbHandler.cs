@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CustomerDemoApiAzureTableStorage.Models;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Table;
-//using Microsoft.Azure.Cosmos.Table;
+//using Microsoft.WindowsAzure.Storage;
+//using Microsoft.WindowsAzure.Storage.Table;
+using Microsoft.Azure.Cosmos.Table;
 
 namespace CustomerDemoApiAzureTableStorage.Services
 {
@@ -17,10 +17,11 @@ namespace CustomerDemoApiAzureTableStorage.Services
         static CloudTableClient tableClient = storageAccount.CreateCloudTableClient();
         static CloudTable customertable = tableClient.GetTableReference("CustomersTable");
 
-        public IEnumerable<Customer> GetAllCustomers()
+        public IEnumerable<CustomerEntity> GetAllCustomers()
         {
             TableQuery<CustomerEntity> getQuery = new TableQuery<CustomerEntity>();
-            return customertable.ExecuteQuery(getQuery);
+            var a = customertable.ExecuteQuery(getQuery);
+            return a;
             //return new List<Customer>();
         }
 

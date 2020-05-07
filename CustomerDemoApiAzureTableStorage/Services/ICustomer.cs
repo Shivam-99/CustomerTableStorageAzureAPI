@@ -8,7 +8,7 @@ namespace CustomerDemoApiAzureTableStorage.Services
 {
     interface ICustomer
     {
-        IEnumerable<Customer> GetAllCustomers();
+        IEnumerable<CustomerEntity> GetAllCustomers();
         void InsertCustomer(Customer c);
     }
 }

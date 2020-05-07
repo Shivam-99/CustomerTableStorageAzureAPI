@@ -17,7 +17,7 @@ namespace CustomerDemoApiAzureTableStorage.Controllers
 
         // GET: api/Customer
         [HttpGet]
-        public IEnumerable<Customer> Get()
+        public IEnumerable<CustomerEntity> Get()
         {
             return customer.GetAllCustomers();
         }
